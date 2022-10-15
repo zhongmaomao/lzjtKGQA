@@ -1,0 +1,202 @@
+[
+  {
+          "domain": "症状描述",
+          "response": [],
+          "concepts": [
+              "症状"
+          ],
+          "children": [
+              "不舒服推理",
+              "闷推理",
+              "痛推理",
+              "塞推理",
+              "出血推理",
+              "跳推理",
+              "困难推理",
+              "瘙痒推理",
+              "晕推理",
+              "酸推理",
+              "疲倦推理",
+              "酸痛推理",
+              "嗡嗡推理",
+              "胀推理",
+              "模糊推理",
+              "泻推理",
+              "裂推理",
+              "弯曲推理",
+              "干推理",
+              "不规则推理"
+          ]
+      },
+      {
+          "domain": "酸推理",
+          "response": [],
+          "concepts": [
+              "酸"
+          ],
+          "children": []
+      },
+      {
+          "domain": "弯曲推理",
+          "response": [],
+          "concepts": [
+              "弯曲"
+          ],
+          "children": []
+      },
+      {
+          "domain": "裂推理",
+          "response": [],
+          "concepts": [
+              "裂"
+          ],
+          "children": []
+      },
+      {
+          "domain": "不舒服推理",
+          "response": [],
+          "concepts": [
+              "不舒服","不适","舒服"
+          ],
+          "children": []
+      },
+      {
+          "domain": "闷推理",
+          "response": [],
+          "concepts": [
+              "闷"
+          ],
+          "children": []
+      },
+      {
+          "domain": "痛推理",
+          "response": [],
+          "concepts": [
+              "痛"
+          ],
+          "children": []
+      },
+      {
+          "domain": "塞推理",
+          "response": [],
+          "concepts": [
+              "塞",
+              "塞住",
+              "堵住"
+          ],
+          "children": []
+      },
+      {
+          "domain": "出血推理",
+          "response": [],
+          "concepts": [
+              "出血",
+              "血",
+              "血丝"
+          ],
+          "children": []
+      },
+      {
+          "domain": "跳推理",
+          "response": [],
+          "concepts": [
+              "跳"
+          ],
+          "children": []
+      },
+      {
+          "domain": "困难推理",
+          "response": [],
+          "concepts": [
+              "困难"
+          ],
+          "children": []
+      },
+      {
+          "domain": "瘙痒推理",
+          "response": [],
+          "concepts": [
+              "瘙痒",
+              "痒"
+          ],
+          "children": []
+      },
+      {
+          "domain": "晕推理",
+          "response": [],
+          "concepts": [
+              "晕"
+          ],
+          "children": []
+      },
+      {
+          "domain": "疲倦推理",
+          "response": [],
+          "concepts": [
+              "疲倦",
+              "累",
+              "很累"
+          ],
+          "children": []
+      },
+      {
+          "domain": "酸痛推理",
+          "response": [],
+          "concepts": [
+              "酸痛"
+          ],
+          "children": []
+      },
+      {
+          "domain": "嗡嗡推理",
+          "response": [],
+          "concepts": [
+              "嗡嗡"
+          ],
+          "children": []
+      },
+      {
+          "domain": "胀推理",
+          "response": [],
+          "concepts": [
+              "胀"
+          ],
+          "children": []
+      },
+      {
+          "domain": "泻推理",
+          "response": [],
+          "concepts": [
+              "泻"
+          ],
+          "children": []
+      },
+      {
+          "domain": "干推理",
+          "response": [],
+          "concepts": [
+              "干"
+          ],
+          "children": []
+      },
+      {
+          "domain": "模糊推理",
+          "response": [],
+          "concepts": [
+              "模糊"
+          ],
+          "children": []
+      },
+      {
+          "domain": "不规则推理",
+          "response": [],
+          "concepts": [
+              "太快",
+              "太慢",
+              "不规则",
+              "不正常"
+          ],
+          "children": []
+      }
+
+]

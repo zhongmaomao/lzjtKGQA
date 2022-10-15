@@ -1,0 +1,26 @@
+[
+  {
+          "domain": "地点描述",
+          "response": [],
+          "concepts": [
+              "地点"
+          ],
+          "children": [
+              "杭州",
+              "宁波"
+          ]
+      },
+      {
+          "domain": "杭州",
+          "response": [],
+          "concepts": [],
+          "children": []
+      },
+      {
+          "domain": "宁波",
+          "response": [],
+          "concepts": [],
+          "children": []
+      }
+
+]

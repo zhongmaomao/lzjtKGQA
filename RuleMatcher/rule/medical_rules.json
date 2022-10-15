@@ -1,0 +1,990 @@
+[
+	{
+      "domain": "过敏",
+      "response": [],
+      "concepts": [
+          "过敏"
+      ],
+      "children": [
+          "鼻子过敏",
+          "食物过敏"
+      ]
+  	},
+  	{
+        "domain": "玫瑰疹",
+        "response": [
+
+        ],
+        "concepts": [
+            "玫瑰疹"
+        ],
+        "children": []
+
+  	},
+  	{
+      "domain": "扭伤",
+      "response": [
+        "先让受伤部位休息再冰敷，如果2~3天后还是没有改善，就建议给医生看看唷！"
+      ],
+      "concepts": [
+          "扭伤",
+					"扭到"
+      ],
+      "children": []
+  	},
+
+  	{
+      "domain": "鼻子过敏",
+      "response": [
+          "如果很不舒服建议去给医生做诊疗喔！"
+      ],
+      "concepts": [
+          "鼻子"
+      ],
+      "children": []
+  	},
+  	{
+      "domain": "食物过敏",
+      "response": [
+      		"如果很不舒服建议去给医生做诊疗喔！"
+      ],
+      "concepts": [
+          "食物"
+      ],
+      "children": []
+  	},
+  	{
+        "domain": "咳嗽",
+        "response": [],
+        "concepts": [
+            "咳嗽",
+						"咳",
+						"咳得",
+            "干咳"
+        ],
+        "children": []
+    },
+    {
+        "domain": "肘关节脱位",
+        "response": [],
+        "concepts": [
+            "肘关节脱位"
+        ],
+        "children": []
+    },
+    {
+        "domain": "消化不良",
+        "response": [],
+        "concepts": [
+            "消化不良",
+            "胃部不适",
+            "胃部不舒服"
+        ],
+        "children": []
+    },
+    {
+        "domain": "心悸",
+        "response": [],
+        "concepts": [
+            "心悸"
+        ],
+        "children": []
+    },
+    {
+        "domain": "乏力",
+        "response": [],
+        "concepts": [
+            "乏力",
+            "四肢无力",
+            "无力"
+        ],
+        "children": []
+    },
+    {
+        "domain": "畏寒",
+        "response": [],
+        "concepts": [
+            "畏寒",
+            "发冷"
+        ],
+        "children": []
+    },
+    {
+        "domain": "罗音",
+        "response": [],
+        "concepts": [
+            "罗音",
+            "杂音"
+        ],
+        "children": []
+    },
+    {
+        "domain": "呼吸困难",
+        "response": [],
+        "concepts": [
+            "呼吸困难",
+            "无法呼吸",
+            "喘不过气"
+        ],
+        "children": []
+    },
+    {
+        "domain": "白带",
+        "response": [],
+        "concepts": [
+            "白带"
+        ],
+        "children": []
+    },
+    {
+        "domain": "落枕",
+        "response": [],
+        "concepts": [
+            "落枕"
+        ],
+        "children": []
+    },
+	{
+        "domain": "食欲不振",
+        "response": [],
+        "concepts": [
+            "食欲不振",
+            "吃不下",
+            "不想吃东西",
+            "食欲减退"
+        ],
+        "children": []
+    },
+    {
+        "domain": "羊水过多",
+        "response": [],
+        "concepts": [
+            "羊水过多"
+        ],
+        "children": []
+    },
+	{
+        "domain": "睾丸疼痛",
+        "response": [],
+        "concepts": [
+            "睾丸疼痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "性交疼痛",
+        "response": [],
+        "concepts": [
+            "性交疼痛"
+        ],
+        "children": []
+    },
+	{
+        "domain": "呼吸急促",
+        "response": [],
+        "concepts": [
+            "呼吸急促",
+            "喘气过快"
+        ],
+        "children": []
+    },
+    {
+        "domain": "肛门瘙痒",
+        "response": [],
+        "concepts": [
+            "肛门瘙痒",
+            "肛门痒"
+        ],
+        "children": []
+    },
+	{
+        "domain": "性欲减退",
+        "response": [],
+        "concepts": [
+            "性欲减退"
+        ],
+        "children": []
+    },
+    {
+        "domain": "肝掌",
+        "response": [],
+        "concepts": [
+            "肝掌"
+        ],
+        "children": []
+    },
+    {
+        "domain": "心律失常",
+        "response": [],
+        "concepts": [
+            "心律失常",
+            "心跳过快",
+            "心跳过慢",
+            "心跳不规则"
+        ],
+        "children": []
+    },
+    {
+        "domain": "头晕",
+        "response": [],
+        "concepts": [
+						"晕",
+            "头晕",
+            "晕眩",
+            "头晕目眩",
+						"头昏眼花"
+        ],
+        "children": []
+    },
+	{
+        "domain": "疲倦",
+        "response": [],
+        "concepts": [
+            "疲倦",
+            "很累",
+            "疲劳"
+        ],
+        "children": []
+    },
+	{
+        "domain": "眼疲劳",
+        "response": [],
+        "concepts": [
+            "眼疲劳",
+            "眼睛酸",
+            "眼睛很累"
+        ],
+        "children": []
+    },
+	{
+        "domain": "腰背痛",
+        "response": [],
+        "concepts": [
+            "腰背痛"
+        ],
+        "children": []
+    },
+	{
+        "domain": "咳痰",
+        "response": [],
+        "concepts": [
+            "咳痰",
+            "痰"
+        ],
+        "children": []
+    },
+	{
+        "domain": "低血压",
+        "response": [],
+        "concepts": [
+            "低血压"
+        ],
+        "children": []
+    },
+	{
+        "domain": "耳痛",
+        "response": [],
+        "concepts": [
+            "耳痛",
+            "耳朵痛"
+        ],
+        "children": []
+    },
+	{
+        "domain": "手足皲裂",
+        "response": [],
+        "concepts": [
+            "手足皲裂"
+        ],
+        "children": []
+    },
+    {
+        "domain": "脱肛",
+        "response": [],
+        "concepts": [
+            "脱肛"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "鳞屑",
+        "response": [],
+        "concepts": [
+            "鳞屑"
+        ],
+        "children": []
+    },
+    {
+        "domain": "记忆力",
+        "response": [],
+        "concepts": [
+            "记忆力",
+            "忘东忘西"
+        ],
+        "children": []
+
+    },
+	{
+        "domain": "冻疮",
+        "response": [],
+        "concepts": [
+            "冻疮"
+        ],
+        "children": []
+
+    },
+	{
+        "domain": "发热",
+        "response": [],
+        "concepts": [
+            "发热",
+            "发烧"
+        ],
+        "children": []
+    },
+    {
+        "domain": "腹痛",
+        "response": [],
+        "concepts": [
+            "腹痛",
+            "肚子痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "反胃",
+        "response": [],
+        "concepts": [
+            "反胃"
+        ],
+        "children": []
+    },
+    {
+        "domain": "流产",
+        "response": [],
+        "concepts": [
+            "流产"
+        ],
+        "children": []
+    },
+    {
+         "domain": "血压升高",
+        "response": [],
+        "concepts": [
+            "血压升高"
+        ],
+        "children": []
+    },
+    {
+        "domain": "腹胀",
+        "response": [],
+        "concepts": [
+            "腹胀",
+            "胀"
+        ],
+        "children": []
+    },
+    {
+        "domain": "痛经",
+        "response": [],
+        "concepts": [
+            "痛经",
+            "经痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "全身酸痛",
+        "response": [],
+        "concepts": [
+            "全身酸痛",
+            "全身酸痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "视力模糊",
+        "response": [],
+        "concepts": [
+            "视力模糊",
+						"看不清"
+        ],
+        "children": []
+    },
+    {
+        "domain": "腹泻",
+        "response": [],
+        "concepts": [
+            "腹泻",
+            "拉肚子"
+        ],
+        "children": []
+    },
+    {
+        "domain": "抽筋",
+        "response": [
+					"建议你按摩跟伸展，这样就可以制止抽筋啰！"
+				],
+        "concepts": [
+
+						"抽筋"
+        ],
+        "children": []
+    },
+		{
+        "domain": "抽搐",
+        "response": [
+				],
+        "concepts": [
+            "抽搐"
+        ],
+        "children": []
+    },
+
+    {
+        "domain": "鼻出血",
+        "response": [],
+        "concepts": [
+            "鼻出血",
+            "流鼻血"
+        ],
+        "children": []
+    },
+	{
+        "domain": "疼痛",
+        "response": [],
+        "concepts": [
+            "疼痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "气喘",
+        "response": [],
+        "concepts": [
+            "气喘"
+        ],
+        "children": []
+    },
+    {
+        "domain": "尿痛",
+        "response": [],
+        "concepts": [
+            "尿痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "乳头内陷",
+        "response": [],
+        "concepts": [
+            "乳头内陷"
+        ],
+        "children": []
+    },
+    {
+        "domain": "闭经",
+        "response": [],
+        "concepts": [
+            "闭经",
+            "停经"
+        ],
+        "children": []
+    },
+    {
+        "domain": "脊柱弯曲",
+        "response": [],
+        "concepts": [
+            "脊柱弯曲"
+        ],
+        "children": []
+    },
+    {
+        "domain": "休克",
+        "response": [],
+        "concepts": [
+            "休克"
+        ],
+        "children": []
+    },
+    {
+        "domain": "肛裂",
+        "response": [],
+        "concepts": [
+            "肛裂"
+        ],
+        "children": []
+    },
+    {
+        "domain": "单瘫",
+        "response": [],
+        "concepts": [
+            "单瘫"
+        ],
+        "children": []
+    },
+    {
+        "domain": "遗尿",
+        "response": [],
+        "concepts": [
+            "遗尿"
+        ],
+        "children": []
+
+    },
+    {
+    	"domain": "牙痛",
+        "response": [],
+        "concepts": [
+            "牙痛",
+            "牙齿"
+        ],
+        "children": []
+    },
+    {
+        "domain": "皮肤干燥",
+        "response": [],
+        "concepts": [
+            "皮肤干燥",
+            "皮肤干"
+        ],
+        "children": []
+    },
+    {
+        "domain": "胸闷",
+        "response": [],
+        "concepts": [
+            "胸闷"
+        ],
+        "children": []
+    },
+    {
+         "domain": "乳房肿块",
+        "response": [],
+        "concepts": [
+            "乳房肿块"
+        ],
+        "children": []
+    },
+    {
+        "domain": "静脉曲张",
+        "response": [],
+        "concepts": [
+            "静脉曲张"
+        ],
+        "children": []
+    },
+	{
+        "domain": "呕吐",
+        "response": [],
+        "concepts": [
+            "呕吐",
+            "吐"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "排尿异常",
+        "response": [],
+        "concepts": [
+            "排尿异常",
+            "排尿"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "盗汗",
+        "response": [],
+        "concepts": [
+            "盗汗"
+        ],
+        "children": []
+    },
+    {
+        "domain": "鼻塞",
+        "response": [],
+        "concepts": [
+            "鼻塞"
+        ],
+        "children": []
+    },
+    {
+        "domain": "贫血",
+        "response": [],
+        "concepts": [
+            "贫血"
+        ],
+        "children": []
+    },
+    {
+        "domain": "流鼻水",
+        "response": [],
+        "concepts": [
+            "鼻涕",
+            "鼻水",
+						"流鼻水",
+						"流鼻涕",
+						"打喷嚏",
+						"喷嚏"
+        ],
+        "children": []
+    },
+    {
+        "domain": "胸痛",
+        "response": [],
+        "concepts": [
+            "胸痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "丘疹",
+        "response": [],
+        "concepts": [
+            "丘疹"
+        ],
+        "children": []
+    },
+    {
+        "domain": "鸡眼",
+        "response": [],
+        "concepts": [
+            "鸡眼"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "创伤",
+        "response": [],
+        "concepts": [
+            "创伤"
+        ],
+        "children": []
+    },
+    {
+        "domain": "耳鸣",
+        "response": [],
+        "concepts": [
+            "耳鸣"
+        ],
+        "children": []
+    },
+    {
+        "domain": "黄疸",
+        "response": [],
+        "concepts": [
+            "黄疸",
+            "发黄"
+        ],
+        "children": []
+    },
+    {
+         "domain": "呕血",
+        "response": [],
+        "concepts": [
+            "呕血",
+						"吐血"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "口干",
+        "response": [],
+        "concepts": [
+            "口干"
+        ],
+        "children": []
+
+    },
+    {
+         "domain": "厌食",
+        "response": [],
+        "concepts": [
+            "厌食"
+        ],
+        "children": []
+    },
+    {
+        "domain": "尿失禁",
+        "response": [],
+        "concepts": [
+            "尿失禁"
+        ],
+        "children": []
+    },
+    {
+        "domain": "遗精",
+        "response": [],
+        "concepts": [
+            "遗精"
+        ],
+        "children": []
+    },
+    {
+        "domain": "头痛",
+        "response": [],
+        "concepts": [
+            "头痛"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "寒战",
+        "response": [],
+        "concepts": [
+            "寒战",
+						"寒颤"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "畏光",
+        "response": [],
+        "concepts": [
+            "畏光"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "瘙痒",
+        "response": [],
+        "concepts": [
+            "瘙痒",
+            "痒",
+						"痒痒"
+        ],
+        "children": []
+    },
+    {
+        "domain": "腰痛",
+        "response": [],
+        "concepts": [
+            "腰痛"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "瘀血",
+        "response": [
+        	"可以先冰敷，如果长时间都没有改善记得到医院去做诊疗喔！"
+        ],
+        "concepts": [
+            "瘀血"
+        ],
+        "children": []
+    },
+    {
+         "domain": "咯血",
+        "response": [],
+        "concepts": [
+            "咯血"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "少尿",
+        "response": [],
+        "concepts": [
+            "少尿"
+        ],
+        "children": []
+    },
+    {
+        "domain": "尿急",
+        "response": [],
+        "concepts": [
+            "尿急"
+        ],
+        "children": []
+    },
+    {
+        "domain": "吞咽困难",
+        "response": [],
+        "concepts": [
+            "吞咽困难",
+						"吞咽困难",
+            "吞咽"
+
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "恶心",
+        "response": [],
+        "concepts": [
+            "恶心"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "疱疹",
+        "response": [],
+        "concepts": [
+            "疱疹"
+        ],
+        "children": []
+    },
+    {
+        "domain": "肌肉酸痛",
+        "response": [],
+        "concepts": [
+            "肌肉酸痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "口臭",
+        "response": [],
+        "concepts": [
+            "口臭"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "湿疹",
+        "response": [],
+        "concepts": [
+            "湿疹"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "便血",
+        "response": [],
+        "concepts": [
+            "便血",
+            "血便"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "便秘",
+        "response": [],
+        "concepts": [
+            "便秘"
+        ],
+        "children": []
+    },
+	{
+        "domain": "关节痛",
+        "response": [],
+        "concepts": [
+            "关节痛"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "恶寒",
+        "response": [],
+        "concepts": [
+            "恶寒"
+        ],
+        "children": []
+    },
+	{
+        "domain": "尿频",
+        "response": [],
+        "concepts": [
+            "尿频",
+            "频尿",
+            "多尿"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "出血",
+        "response": [],
+        "concepts": [
+            "出血"
+        ],
+        "children": []
+    },
+    {
+		"domain": "浮肿",
+        "response": [],
+    	"concepts": [
+            "浮肿",
+            "水肿"
+        ],
+        "children": []
+    },
+    {
+        "domain": "尿血",
+        "response": [],
+        "concepts": [
+            "尿血",
+            "血尿"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "无尿",
+        "response": [],
+        "concepts": [
+            "无尿"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "痢疾",
+        "response": [],
+        "concepts": [
+            "痢疾"
+        ],
+        "children": []
+
+    },
+    {
+        "domain": "宫颈糜烂",
+        "response": [],
+        "concepts": [
+            "宫颈糜烂"
+        ],
+        "children": []
+
+    },
+    {
+    	"domain": "心绞痛",
+        "response": [],
+        "concepts": [
+            "心绞痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "胃痛",
+        "response": [],
+        "concepts": [
+            "胃痛"
+        ],
+        "children": []
+    },
+    {
+        "domain": "雀斑",
+        "response": [],
+        "concepts": [
+            "雀斑"
+        ],
+        "children": []
+    }
+
+]

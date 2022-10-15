@@ -1,0 +1,456 @@
+[
+{
+		"domain": "吃",
+		"response": [
+
+		],
+		"concepts": [
+			"吃","饿","好吃"
+		],
+		"children": [
+			"饭",
+			"面",
+			"锅贴",
+			"火锅",
+			"速食",
+			"西餐",
+			"粥",
+			"小吃",
+			"美食",
+			"冰"
+		]
+	},
+{
+		"domain": "饮料",
+		"response": [
+
+		],
+		"concepts": [
+			"喝","渴"
+		],
+		"children": [
+			"茶",
+			"果汁",
+			"咖啡",
+			"牛奶"
+		]
+	},
+{
+		"domain": "景点",
+		"response": [
+
+		],
+		"concepts": [
+			"玩","好玩","逛","看","好看","去","走"
+		],
+		"children": [
+			"电影",
+			"电影院",
+			"夜市",
+			"公园",
+			"博物馆",
+			"纪念馆",
+			"美术馆",
+			"捷运站",
+			"公车站",
+			"火车站"
+		]
+	},
+{
+		"domain": "超商",
+		"response": [
+
+		],
+		"concepts": [
+			"超商","零食","水","汽水"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "电影",
+		"response": [
+
+		],
+		"concepts": [
+			"电影"
+		],
+		"children": [
+		]
+	},
+
+{
+		"domain": "电影院",
+		"response": [
+
+		],
+		"concepts": [
+			"电影院","影城"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "夜市",
+		"response": [
+
+		],
+		"concepts": [
+			"夜市"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "公园",
+		"response": [
+
+		],
+		"concepts": [
+			"公园"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "博物馆",
+		"response": [
+
+		],
+		"concepts": [
+			"博物馆"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "纪念馆",
+		"response": [
+
+		],
+		"concepts": [
+			"纪念馆"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "美术馆",
+		"response": [
+
+		],
+		"concepts": [
+			"美术馆"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "捷运站",
+		"response": [
+
+		],
+		"concepts": [
+			"捷运站","捷运"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "公车站",
+		"response": [
+
+		],
+		"concepts": [
+			"公车站","公车"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "火车站",
+		"response": [
+
+		],
+		"concepts": [
+			"火车站","火车"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "饭",
+		"response": [
+		],
+		"concepts": [
+			"饭"
+		],
+		"children": [
+			"咖喱饭",
+			"烧腊饭",
+			"炒饭",
+			"烩饭",
+			"炖饭"
+		]
+	},
+{
+		"domain": "咖喱饭",
+		"response": [
+		],
+		"concepts": [
+			"咖喱饭"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "烧腊饭",
+		"response": [
+		],
+		"concepts": [
+			"烧腊"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "炒饭",
+		"response": [
+		],
+		"concepts": [
+			"炒饭"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "烩饭",
+		"response": [
+		],
+		"concepts": [
+			"烩饭"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "炖饭",
+		"response": [
+		],
+		"concepts": [
+			"炖饭"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "锅贴",
+		"response": [
+		],
+		"concepts": [
+			"锅贴"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "面",
+		"response": [
+		],
+		"concepts": [
+			"面","拉面","炒面","意面","泡面","意大利面","乌冬面"
+		],
+		"children": [
+			"拉面",
+			"炒面",
+			"意面",
+			"泡面",
+			"意大利面",
+			"乌冬面"
+		]
+	},
+{
+		"domain": "拉面",
+		"response": [
+		],
+		"concepts": [
+			"拉面"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "炒面",
+		"response": [
+		],
+		"concepts": [
+			"炒面"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "意面",
+		"response": [
+		],
+		"concepts": [
+			"意面"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "泡面",
+		"response": [
+		],
+		"concepts": [
+			"泡面"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "意大利面",
+		"response": [
+		],
+		"concepts": [
+			"意大利面"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "乌冬面",
+		"response": [
+		],
+		"concepts": [
+			"乌冬面"
+		],
+		"children": [
+		]
+	},
+{
+		"domain": "火锅",
+		"response": [
+		],
+		"concepts": [
+			"火锅"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "速食",
+		"response": [
+		],
+		"concepts": [
+			"速食"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "西餐",
+		"response": [
+		],
+		"concepts": [
+			"西餐"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "粥",
+		"response": [
+		],
+		"concepts": [
+			"粥"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "小吃",
+		"response": [
+		],
+		"concepts": [
+			"小吃"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "美食",
+		"response": [
+		],
+		"concepts": [
+			"美食"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "冰",
+		"response": [
+		],
+		"concepts": [
+			"冰"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "茶",
+
+		"response": [
+		],
+		"concepts": [
+			"茶","红茶","绿茶","麦茶","冬瓜茶","奶茶","乌龙茶"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "果汁",
+
+		"response": [
+		],
+		"concepts": [
+			"果汁"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "咖啡",
+
+		"response": [
+		],
+		"concepts": [
+			"咖啡","拿铁","卡布奇诺"
+		],
+		"children": [
+
+		]
+	},
+{
+		"domain": "牛奶",
+		"response": [
+		],
+		"concepts": [
+			"牛奶","喝牛奶","鲜奶","奶粉","奶"
+		],
+		"children": [
+
+		]
+	}
+]

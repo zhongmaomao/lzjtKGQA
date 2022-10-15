@@ -1,0 +1,40 @@
+[
+  {
+    "domain": "因为疲劳",
+    "response": [
+      "休息一下吧，让我帮你订个闹钟。"
+    ],
+    "concepts": [
+        "疲劳",
+        "累"
+    ],
+    "children": [
+
+    ]
+  },
+  {
+    "domain": "累",
+    "response": [
+      "休息一下吧，让我帮你订个闹钟。"
+    ],
+    "concepts": [
+        "疲劳",
+        "累"
+    ],
+    "children": [
+
+    ]
+  },
+  {
+    "domain": "其他",
+    "response": [
+      "闹钟要订在几点?"
+    ],
+    "concepts": [
+        "闹钟"
+    ],
+    "children": [
+
+    ]
+  }
+]
