@@ -1,14 +1,15 @@
 from flask import Flask, request, Response, jsonify
+import filter.filter as Filter
 import os
 from gjc import QABot
 
 app = Flask(__name__)
 address = "http://127.0.0.1:5000/query"
-env_list = os.environ
-address = env_list['post_address']
-graphIP = env_list['graph']
-username = env_list['username']
-password = env_list['password']
+# env_list = os.environ
+# address = env_list['post_address']
+# graphIP = env_list['graph']
+# username = env_list['username']
+# password = env_list['password']
 
 
 
@@ -38,15 +39,19 @@ def hello():
 def query():
     request_data = request.json
     question = request_data['question']  # <----- 1.
+    question = filter_part.words_replace(question)
     if question:
         answer = bot.query(question)   # <----- 2.
     else:
         answer = "Sorry, what did you say?"
-    print(answer)
-    return jsonify({'answer': answer})
+    res = {'question': question,
+           'answer': answer
+           }
+    return jsonify(res)
 
 
 if __name__ == '__main__':
     bot = QABot()
+    filter_part = Filter.ac_automation()
     app.config['JSON_AS_ASCII'] = False
     app.run(host="127.0.0.1", port=5000, debug=False)

@@ -4,15 +4,15 @@ import re
 import os
 
 
-graphIP = "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:31700"
+graphIP = "bolt://neoforj.zhinengwenda-test.svc.cluster.hz:30665"
 username = "neo4j"
-password = "crash-diploma-nuclear-spiral-common-5580"
+password = "mercy-france-collect-gong-window-7317"
 
 
-env_list = os.environ
-graphIP = env_list['graph']
-username = env_list['username']
-password = env_list['password']
+# env_list = os.environ
+# graphIP = env_list['graph']
+# username = env_list['username']
+# password = env_list['password']
 
 
 
@@ -70,127 +70,6 @@ class Resolver:
 
         return {"intent": "find_roadnum", "seg": seg}
 
-
-# TODO 目前仍存在一下几个问题
-# 1.对时间和地点人物的处理基本可用，涉及组织的答案还有待测试
-# 2.在组织查询的时候对没有组织，人名，地点等不存在的情况做出考虑（查询会出错）
-# 重点修改对查询语句的组织
-class Selector:
-
-    def __init__(self, graph):
-        self.graph = graph
-
-    def get_answer(self, q_result):
-        time_pattern = "((\d+)年)?((\d+)月)?((\d+)(日|号))?"
-        event_cql = "match (e:事件) where true "
-        event_attr_select_tmp = " and e.description =~ '.*{qtopic}.*' "
-        time_cql = "match p2 = (e)-[]-(d:`日`)-[]-(m:`月`)-[]-(y:`年`) where true "
-        loc_cql = "match p1 = (e) -[]-(l:`地点`) "
-        people_cql = "match p3 = (e)-[]-(p:`人物`) "
-        # 第一步应该先根据主题词来确定问题涉及的知识图中的具体实体
-        for qtopic in q_result["qtopics"]:
-            if qtopic[1].__contains__("TMP"):
-                time_result = re.match(time_pattern, qtopic[0])
-                year = time_result.group(2)
-                month = time_result.group(4)
-                day = time_result.group(6)
-                if year is not None:
-                    time_cql += " and y.name = '{}' ".format(year)
-                if month is not None:
-                    time_cql += " and m.name = '{}' ".format(month)
-                if day is not None:
-                    time_cql += " and d.name = '{}' ".format(day)
-            elif qtopic[1].__contains__("LOC"):
-                pass
-            else:
-                event_cql += event_attr_select_tmp.format(qtopic=qtopic[0])
-
-        # 第二步，根据问题词和问题焦点确定答案的类型
-        return_tmp = "return e"
-        answer_type = None
-        time_keywords = ["时候", "时间", "年", "月", "日"]
-        place_keywords = ["省", "市", "区", "州", "哪里"]
-        people_keywords = ["谁"]
-        org_keywords = ["组织", "协会", "会", "集团", "部", "大学", "局", "组", "院", "公司", "行"]
-        for qf in q_result["qfocus"]:
-            if qf in time_keywords:
-                answer_type = "时间"
-            elif qf in place_keywords:
-                answer_type = "地点"
-            elif qf in people_keywords:
-                answer_type = "人物"
-            elif qf in org_keywords:
-                answer_type = "组织"
-        for qrel in q_result["qrels"]:
-            if qrel is "TIME":
-                answer_type = "时间"
-            elif qrel is "LOC":
-                answer_type = "地点"
-            elif answer_type is None:
-                answer_type = "事件"
-        if answer_type is "时间":
-            return_tmp += ",y,m,d"
-        elif answer_type is "地点":
-            event_cql += "\n" + loc_cql
-            return_tmp += ",l"
-        elif answer_type is "人物":
-            event_cql += "\n" + people_cql
-            return_tmp += ",p"
-
-        # 依据qrel来作为辅助信息，完善查询
-        cql = event_cql + "\n" + time_cql + "\n" + return_tmp
-        return cql
-
-    def regular_answer(self, question, cql):
-        result = self.graph.run(cql).to_subgraph()
-        if result is None:
-            print("没找到相关问题的答案")
-        else:
-            nodes = result.nodes
-            for node in nodes:
-                if "事件" in node.labels:
-                    print(node["description"])
-                else:
-                    if not question.__contains__(node["name"]):
-                        for label in node.labels:
-                            print(label, end=":")
-                        print(node["name"])
-
-    # Success
-    # interval中传一个时间范围,范例如下
-    # {start_year:2017,start_month:1,start_day:1,end_year:2017,end_month:1,end_day:10}表示在2017.1.1到2017.1.10的时间范围
-    def condition_select(self, interval=None, fields=None, place=None):
-        # 1找到时间范围内的事件节点
-        select_cql = ""
-        time_cql = "match (y:`年`)<-[:`时间属于`]-(m:`月`)<-[:`时间属于`]-(d:`日`)-[:`开始时间`]-(e:`事件`) "
-        if interval is not None:
-            time_select_cql = "where ((y.value > {start_year} and y.value < {end_year}) " \
-                       "or ({start_year} = {end_year} and {start_month} = {end_month} and y.value = {start_year} and m.value = {start_month} and d.value >= {start_day} and d.value <= {end_day}) " \
-                       "or ({start_year} = {end_year} and {start_month} < {end_month} and y.value = {start_year} and ((m.value = {start_month} and d.value >= {start_day}) or (m.value > {start_month} and m.value < {end_month}) or (m.value = {end_month} and d.value <= {end_day}))) " \
-                       "or ({start_year} < {end_year} and y.value = {start_year} and ((m.value > {start_month}) or (m.value = {start_month} and d.value >= {start_day}))) " \
-                       "or ({start_year} < {end_year} and y.value = {end_year} and ((m.value < {end_month}) or (m.value = {end_month} and d.value <= {end_day}))))"
-            time_select_cql = time_select_cql.format(**interval)
-            time_cql += time_select_cql
-        select_cql += time_cql + "\n"
-        # 2找到所属领域内的事件节点
-        field_cql = "match (e:`事件`)-[:`所属领域`]-(f:`领域`) "
-        if fields is not None:
-            field_select_cql = "where f.field in " + fields.__str__()
-            if len(fields) != 0:
-                field_cql = field_cql + field_select_cql
-        select_cql += field_cql + "\n"
-        # 3找到地理位置下的所有事件节点
-        place_cql = "match (l:`地点`) "
-        place_path_cql = "match p = (e:`事件`)-[r:`事件地点`]->(:`地点`)-[:`地点属于` * 0..4]->(l)"
-        if place is not None:
-            place_cql += "where l.name = '{}'".format(place)
-            place_cql += "\n" + place_path_cql
-            select_cql += place_cql
-        select_cql += "\n" + "return distinct id(e),date(y.name + '-'+m.name+'-'+d.name) as time ,e.description order by time"
-
-        # 4交给graph去查找，组织答案
-        result = self.graph.run(select_cql).to_data_frame()["e.description"].to_list()
-        return result
 
 class QABot:
     def __init__(self):
