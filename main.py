@@ -4,14 +4,12 @@ import os
 from gjc import QABot
 
 app = Flask(__name__)
-address = "http://127.0.0.1:5000/query"
-# env_list = os.environ
-# address = env_list['post_address']
-# graphIP = env_list['graph']
-# username = env_list['username']
-# password = env_list['password']
+env_list = os.environ
 
-
+address = env_list.get('post_address', "0.0.0.0")
+graphIP = env_list.get('graph', "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:30665")
+username = env_list.get('username', "neo4j")
+password = env_list.get('password', "mercy-france-collect-gong-window-7317")
 
 @app.route('/')
 def hello():
@@ -54,4 +52,4 @@ if __name__ == '__main__':
     bot = QABot()
     filter_part = Filter.ac_automation()
     app.config['JSON_AS_ASCII'] = False
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    app.run(host=address, port=5000, debug=False)

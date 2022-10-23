@@ -1,37 +1,33 @@
-from ltp import LTP
+# from ltp import LTP
+import jieba
 from py2neo import Graph
-import re
 import os
+import re
 
 
-graphIP = "bolt://neoforj.zhinengwenda-test.svc.cluster.hz:30665"
-username = "neo4j"
-password = "mercy-france-collect-gong-window-7317"
-
-
-# env_list = os.environ
-# graphIP = env_list['graph']
-# username = env_list['username']
-# password = env_list['password']
-
+env_list = os.environ
+graphIP = env_list.get('graph', "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:30665")
+username = env_list.get('username', "neo4j")
+password = env_list.get('password', "mercy-france-collect-gong-window-7317")
 
 
 # 解析器，用于解析问题中的意图
 # 返回包含主题词，问题词，问题焦点等在内的问题意图
 class Resolver:
     def __init__(self):
-        self.ltp = LTP()
+        self.model = 'jieba'
+        # self.ltp = LTP()
 
     # 解析问题
     def resolve_question(self, text):
         # 先交给ltp模型处理，主要获得分词的词性和语法依存关系
         # output = self.ltp.pipeline([text], tasks=["cws", "pos", "ner", "srl", "dep", "sdp"])
-        output = self.ltp.pipeline([text], tasks=["cws"])
-        seg = output.cws[0]
+        # output = self.ltp.pipeline([text], tasks=["cws"])
+        # seg = output.cws[0]
         # pos = output.pos[0]
         # srl = output.srl
         # sdp = output.sdp
-
+        seg = jieba.cut(text, cut_all=False)
 
         # 依据词性，找到问题的动词和主题词
         # qverb = None
@@ -83,13 +79,21 @@ class QABot:
         res = self.resolver.resolve_question(sentence)
         intent = res['intent']
         seg = res['seg']
-        num = ""
-        for word in seg:
-            if(word[0] == '桂'):
-                num = word
-        if num == "":
+        pattern = '([桂]{1}[A-Z]{1}[A-Z0-9]{5})'
+        m = re.search(pattern, sentence)
+        if m == None:
             return "no record"
+
+        num = m.groups()[0]
+        # for word in seg:
+        #     print(word + '/ ')
+        #     if(word[0] == '桂'):
+        #         num = word
+        # if num == "":
+        #     return "no record"
+
         qrl = 'match (person:人员) -[r:驾驶]->(vehical:车辆) where vehical.name = "' + num + '" return person.name'
+        print(qrl)
         result = self.graph.run(qrl)
         answer = ""
         for record in result:
@@ -120,5 +124,3 @@ if __name__ == "__main__":
         answer += record[0]
 
     print(answer)
-
-
