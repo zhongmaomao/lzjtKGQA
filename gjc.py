@@ -6,9 +6,10 @@ import re
 
 
 env_list = os.environ
-graphIP = env_list.get('graph', "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:30665")
-username = env_list.get('username', "neo4j")
-password = env_list.get('password', "mercy-france-collect-gong-window-7317")
+address = env_list.get('post_address', "0.0.0.0")
+graphIP = env_list.get('graph_ip', "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:30665")
+username = env_list.get('graph_username', "neo4j")
+password = env_list.get('graph_password', "mercy-france-collect-gong-window-7317")
 
 
 # 解析器，用于解析问题中的意图

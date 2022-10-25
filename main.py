@@ -7,13 +7,13 @@ app = Flask(__name__)
 env_list = os.environ
 
 address = env_list.get('post_address', "0.0.0.0")
-graphIP = env_list.get('graph', "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:30665")
-username = env_list.get('username', "neo4j")
-password = env_list.get('password', "mercy-france-collect-gong-window-7317")
+graphIP = env_list.get('graph_ip', "neo4j://neoforj.zhinengwenda-test.svc.cluster.hz:30665")
+username = env_list.get('graph_username', "neo4j")
+password = env_list.get('graph_password', "mercy-france-collect-gong-window-7317")
 
-@app.route('/')
+@app.route('/api/lzjt-zhinengwenda/')
 def hello():
-    return 'hello'
+    return 'Hello! Here is lzjt-zhinengwenda system.'
 
 # @app.route('/register', methods=['POST'])
 # def register():
@@ -33,16 +33,26 @@ def hello():
 #     return jsonify(result)
 
 
-@app.route("/query", methods=["POST"])
-def query():
-    request_data = request.json
-    question = request_data['question']  # <----- 1.
+@app.route("/api/lzjt-zhinengwenda/kgqa", methods=["GET"])
+def kgqa():
+    # request_data = request.json
+    # question = request_data['question']  # <----- 1.
+    question = request.args.get('question', '')
     question = filter_part.words_replace(question)
     if question:
         answer = bot.query(question)   # <----- 2.
+        if answer != "no record":
+            msg = "查询成功"
+        else:
+            msg = "查询无结果"
+        code = '1'
     else:
         answer = "Sorry, what did you say?"
-    res = {'question': question,
+        msg = "查询失败"
+        code = '0'
+    res = {'code': code,
+           'msg': msg,
+           'question': question,
            'answer': answer
            }
     return jsonify(res)
